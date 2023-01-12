@@ -1,0 +1,11 @@
+#main {
+    width: 300px;
+    border: 1px solid black;
+    background-color: lightgrey;
+    padding: 20px;
+    text-align: center;
+}
+/* Style class for elements that will be hidden until the "Show" button is clicked */
+.showable {
+    display: none;
+}
