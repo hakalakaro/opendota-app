@@ -5,10 +5,10 @@ The instructions to use the app are written in the app itself.
 
 Techniques used: 
 
-Javascript
-HTML
-CSS
-API integration
+Javascript,
+HTML,
+CSS,
+API integration,
 JSON
 
 Application created by: Karo Hakala
