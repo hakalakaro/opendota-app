@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <title>opendota-app</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+</head>
+<html>
+<body>
+    <!-- ==== Header of the site ==== -->
+    <div id="header">
+        <h1><a href="www.opendota.com" style="color: white;">OpenDota API</a></h1>
+    </div>
+    
+    <!-- ==== Container Start ==== -->
+    <div id="container" class="container">
+        <!-- ==== Main1 Start ==== -->
+        <div id="main1" class="main">
+            <!-- ==== Heading for Main1 ==== -->
+            <div id="heading" class="heading">
+                <h2>Search Match Information</h2>
+            </div>
+            <!-- ==== Instructions to user ==== -->
+            <div id="infotext1">
+                <p>
+                    User can submit ID of the played match of Dota 2 and the application will display information about the searched match, including region, 
+                    game result, start time of the game, duration of the game and total kills.
+                </p>
+            </div>
+            <!-- ==== Instructions to user ==== -->
+            <div id="infotext2">
+                <p>
+                    The ID of the match can be found when opening a certain match from Open Dota database and looking on the top right where reads "MATCH ID",
+                    for example <a href="https://www.opendota.com/matches/6942906546">here</a>. <br />
+                    Example ID:s to use: 6942906546, 6928303091, 6922605879.
+                </p>
+            </div>
+            <!-- ==== Text input field for the user to enter the match ID ==== -->
+            <input type="text" class="input" id="input1" placeholder="Type ID of the game here.." />
+            <!-- ==== "Show" button that when clicked, triggers the JavaScript function to make the api call and show the match information ==== -->
+            <button id="submit" class="btn" value="Submit" onclick="btnClick()">Search</button>
+            <!-- ==== "Reset" button that when clicked, triggers the JavaScript function to reload the page and clear the form ==== -->
+            <button id="reset" class="btn" value="Reset" onclick="resetClick()">Reset</button>
+            <!-- ==== Paragraph elements that will be updated with information about the match once the "Show" button is clicked ==== -->
+            <!-- ==== Information Start ==== -->
+            <div class="information" id="information1">
+                <p id="error-message" class="showable"></p>
+                <p id="infotext" class="showable"></p>
+                <p id="region" class="showable"></p>
+                <p id="startdate" class="showable"></p>
+                <p id="radiant_win" class="showable"></p>
+                <p id="duration" class="showable"></p>
+                <p id="totalkills" class="showable"></p>
+                <p id="radiantscore" class="showable"></p>
+                <p id="direscore" class="showable"></p>
+                <!-- ==== Information End ==== -->
+            </div>
+            <!-- ==== Main1 End ==== -->
+        </div>
+        <!-- ==== Main2 Start ==== -->
+        <div id="main2" class="main">
+            <!-- ==== Heading for Main2 ==== -->
+            <div id="heading">
+                <h2>Search Player Information</h2>
+            </div>
+            <!-- ==== Instructions to user ==== -->
+            <div id="infotext1">
+                <p>
+                User can submit Steam32 ID of a player and the application will display information about the searched player, including their account name,
+                last login, link to profile, rating, amount of played games and total wins/losses. 
+                </p>
+            </div>
+            <!-- ==== Instructions to user ==== -->
+            <div id="infotext2">
+                <p>
+                    The player information uses the player's Steam32 ID as input, there are multiple ways online to convert your account profile information
+                    into Steam32 ID, for example <a href="">here</a>. <br />
+                    Example Steam32 ID:s to use: 43635946, 954729093, 993670205.
+                </p>
+            </div>
+            <!-- ==== Text input field for the user to enter the player ID ==== -->
+            <input type="text" class="input" id="input2" placeholder="Type Steam ID here.." />
+            <!-- ==== "Show" button that when clicked, triggers the JavaScript function to make the api call and show the player information ==== -->
+            <button id="submit" class="btn" value="Submit" onclick="btnClick2()">Search</button>
+            <!-- ==== "Reset" button that when clicked, triggers the JavaScript function to reload the page and clears the form ==== -->
+            <button id="reset" class="btn" value="Reset" onclick="resetClick()">Reset</button>
+            <!-- ==== Information2 Start ==== -->
+            <div class="information" id="information2">
+                <p id="error-message2" class="showable"></p>
+                <p id="acc_id" class="showable"></p>
+                <p id="accname" class="showable"></p>
+                <p id="login" class="showable"></p>
+                <p id="profileurl" class="showable"></p>
+                <p id="mmr" class="showable"></p>
+                <p id="total" class="showable"></p>
+                <p id="win" class="showable"></p>
+                <p id="loss" class="showable"></p>
+            <!-- ==== Information2 End ==== -->
+            </div>
+                <!-- ==== Main2 End ==== -->
+            </div>
+            <!-- ==== Container End ==== -->
+        </div>
+    
+    <!-- ==== Footer of the site ==== -->
+    <footer class="footer">
+        www.opendota.com
+    </footer>
+
+</body>
+</html>
